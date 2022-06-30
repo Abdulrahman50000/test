@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: #F8F1F1;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+}
+
+.logo{
+    text-decoration: none;
+    color: #16697A;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+
+
+.links{
+    position: relative;
+    display: none;
+}
+
+.l-icon:hover span:nth-child(2){
+    width: 100%;
+}
+
+.l-icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: flex-end ;
+}
+
+.l-icon span{
+    background: #333 ;
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+.l-icon span:first-child{
+    height: 3px;
+    width: 100%;
+}
+
+.l-icon span:nth-child(2){
+    height: 3px;
+    width: 60%;
+    transition: 0.3s ease ;
+}
+
+.l-icon span:last-child{
+    height: 3px;
+    width: 100%;
+}
+
+.links-ul{
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    opacity: 0.97;
+    position: absolute;
+    left: 0;
+    min-width: 200px;
+    top: calc(100% + 20px);
+    display: none;
+}
+
+
+.links ul::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    left: 5px;
+    top: -20px;
+}
+
+.links ul li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s ease;
+}
+
+.links ul li a:hover{
+    padding-right: 25px;
+    color: #16697A;
+}
+
+.links ul li a:hover .links ul{
+    display: none;
+}
+
+.links ul li:not(:last-child) a{
+    border-bottom: 1px solid #ddd;
+}
+
+.links:hover ul{
+    display: block;
+}
+
+
+.navigation a{
+    color: #16697A;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 550;
+    padding-left: 30px;
+    transition: 0.5s ease;
+}
+
+.navigation a:hover{
+    color: #028a0f;
+    font-size: 1.19em ;
+}
+
+.class-text.show{
+    color: #028a0f;
+    font-size: 1.19em ;
+}
+
+.sound-text.show{
+    color: #028a0f;
+    font-size: 1.19em ;
+}
+
+section{
+    padding: 100px 200px;
+    
+}
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(images/background\ sheik\ akila\(2\).jpg) no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+.main h2{
+    color: #fff;
+    font-size: 1em;  
+    font-weight: 400; 
+}
+.main h2 span{
+    display: inline-block;
+    margin-top: 10px;
+    color: #82DBD8;
+    font-size: 3em;
+    font-weight: 650;
+    
+}
+
+.main h3{
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30pxs;
+}
+
+.main-btn{
+    color: #fff;
+    background-color: #0000FF;
+    text-decoration: none;
+    font-size: 0.8em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    transition: 0.7s ease;
+
+}
+
+.main-btn:hover{
+    background-color: #0000C0;
+    transform: scale(1.1);
+}
+
+.social-icons a{
+    color: #fff;
+    font-size: 1.4em;
+    padding-right: 30px;
+    transition: 0.7s ease;
+}
+
+.social-icons a:hover{
+    color: #16697A;
+    font-size: 1.4em;
+    padding-right: 30px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    color: #1684A7;
+    font-size: 2.7em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.title-info{
+    display: flex;
+    justify-content: center;
+    margin-top: -37px;
+    font-weight: 500;
+    font-size: 1em;
+    color: #f2c83b;
+    text-shadow: 0 3px 10px rgba(240, 248, 5, 0.80);
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+
+
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.icon{
+    color: #1684A7;
+    font-size: 8em;
+    text-align: center;
+}
+
+
+
+
+.info{
+    text-align: center;
+}
+
+.info h3{
+    color: #1684A7;
+    font-size: 1.16em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.cards{
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: top;
+}
+
+.up{
+    position: fixed;
+    width: 35px;
+    height: 38px;
+    background-color: #1684A7;
+    opacity: 0.87;
+    bottom: -60px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    z-index: 999;
+    transition: 0.2s ease;
+}
+
+.up.show{
+    bottom: 60px;
+}
+
+
+
+.sounds{
+    background-color: #000016;
+    background-size: cover;
+    background-position: top;
+}
+
+.sounds .content{
+    margin-top: 30px ;
+}
+
+.sound-card{
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+
+.sound-card:hover{
+    transform: scale(1.1);
+}
+
+.sound-card:hover .sounds-images{
+    opacity: 0.9;
+}
+
+.sound-info{
+    padding: 1em;
+}
+
+.alayat{
+    font-size: 0.8em;
+    color: #000;
+}
+
+.sounds-images img{
+    width: 100%;
+}
+
+.video-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;;
+    background: rgba( 0, 0, 0, 0.8);
+   height: 50%;
+   width: 50%;
+}
+
+
+.video-container video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    border: 3px solid white;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.video-container.show {
+    display: inline;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;;
+    background: rgba( 0, 0, 0, 0.8);
+   height: 100%;
+   width: 100%;
+}
+
+.video-container button{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 50px;
+    color: #fff;
+    font-weight: bolder;
+    background: none;
+    border: none;
+    z-index: 1000;
+}
+
+
+
+.alsorah{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.watch{
+    background: none ;
+    border: none;
+    font-size: 0.9em;
+    font-weight: 650;
+    text-decoration: none;
+    color: #3a6cf4;
+    transition: 0.4s ease;
+}
+
+.watch:hover{
+    color: #0000C0;
+}
+
+.whts-link{
+    color: #16697A;
+    font-size: 1.16em;
+    font-weight: 700;
+    margin: 10px;
+    text-decoration: none;
+    transition: 0.9s ease;
+}
+
+.whts-link:hover{
+    color: #601cfc;
+}
+
+.contact .icon{
+    color: #16697A;
+    font-size: 4.5em;
+    text-align: center;
+    padding-left: 10px ;
+}
+
+.e-mail-link{
+    color: #16697A;
+    font-size: 1.16em;
+    font-weight: 700;
+    margin: 10px;
+    text-decoration: none;
+    transition: 0.9s ease;
+}
+
+.e-mail-link:hover{
+    color: #0000C0;
+}
+
+.contact .info p{
+    font-size: 1.5em;
+}
+
+.footer{
+    background-color: #000016;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-title{
+    font-size: 300;
+
+}
+
+.footer-title span{
+    color: gold;
+}
+
+.footer .social-icons a{
+    font-size: 1em;
+    padding: 0 12px 0 0;
+    transition: 0.7s ease;
+}
+
+.footer .social-icons a:hover{
+    color: gold;
+}
+@media (max-width:1023px){
+    .video-container video{
+        width: 95%;
+    }
+    header{
+        padding: 12px 20px;
+    }
+    .logo{
+        font-size: 1.8em;
+    }
+    .navigation{
+        display: none;
+    }
+
+    .links{
+        display: block;
+    }
+    
+    .main{
+        background: url(images/background\ sheik\ akila\(2\)\(2\).jpg) no-repeat;
+        background-size: cover;
+    }
+
+    .title{
+        font-size: 1.8em;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+    .main-content h2{
+        font-size: 1em;
+    }
+
+    .main-content h3{
+        font-size: 1.6em;
+    }
+    
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .up{
+        
+        height: 30px;
+        width: 30px;
+        font-size: 16px;
+        right: 12px;
+    }
+    
+}
+
+@media (max-width: 641px){
+    body{
+        font-size: 12px;
+    }
+    .main-content h2{
+        font-size: 0.8em;
+    }
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+    }
+    
+}
+
+@media (max-width:400px){
+  
+    .links ul{
+        min-width: 130px;
+    }
+   .logo{
+       right: 13em;
+   }
+}
